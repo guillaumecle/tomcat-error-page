@@ -11,7 +11,6 @@ public class MainServlet extends HttpServlet{
 
 	@Override
 	protected void service(HttpServletRequest req, HttpServletResponse resp){
-		resp.setStatus(HttpServletResponse.SC_INTERNAL_SERVER_ERROR);
 		try{
 			doSlowWrite(resp);
 		}catch(Exception e){ // prevent the IOException to bubble up
